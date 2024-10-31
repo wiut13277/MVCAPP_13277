@@ -1,0 +1,10 @@
+version: 0.0
+os: windows
+files:
+  - source: \mvc
+    destination: c:\inetpub\wwwroot
+hooks:
+  BeforeInstall:
+    - location: \deploy-scripts\before.bat
+      timeout: 120
+      runas: Administrator
